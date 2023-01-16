@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Author: Nathaniel Han
+		       Date: Jan 16 2023 -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content ="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDV 341 - 2-1: Define Git-related Terms</title>
+        <style>
+            #main-content {
+                max-width: 800px;
+            }
+            dt {
+                font-weight: bold;
+            }
+            dd {
+                margin-left: 20px;
+                margin-bottom: 1em;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            <a href="../wdv341.php">&lt; Back to WDV 341 Homework</a>
+        </p>
+        <h1>Research and define the following Git-related terms:</h1>
+        <div id="main-content">
+            <dl>
+                <dt>Version Control Software</dt>
+                <dd>Version Control Software (VCS) is a system of tools that developers use to help them track revisions in their work. When a developer makes changes to code or other
+                    documents, they can tell their VCS to record the changes, typically alongside a description of what the changes do. This makes it easy to see how a project evolves
+                    over time, helps developers hunt down bugs, and allows the code to be quickly reverted to a past version if necessary. VCS can also create branches in the version
+                    history to track changes that may be discarded later or may turn the project into something incompatible with other upcoming changes to the code. VCS is also an
+                    indispensible collaborative tool that allows multiple people to work on the same code and then merge their contributions together with relative ease. VCS typically 
+                    includes the version control system itself such as Git, SVN, or Mercurial, and a cloud-based repository such as GitHub or Bitbucket that remotely stores all of the
+                    code and its history.
+                </dd>
+                <dt>add</dt>
+                <dd>Git does not assume that all changes made within the version controlled directory will be committed at the same time or for the same purpose. The 'git add' command
+                    lets you tell Git which files' changes should be included the next time you commit an update to the version history.
+                </dd>
+                <dt>commit</dt>
+                <dd>The 'git commit' command tells Git to take all of the modified files you selected using 'git add' and save them as an update in the version history. You can use the
+                    '-a' flag to include all changes in the working directory instead of using 'git add'. The '-m' flag lets you include a commit message to describe the update and its 
+                    purpose.
+                </dd>
+                <dt>push</dt>
+                <dd>The 'git push' command lets you upload one of more branches of your local repository and all the changes that have been committed to it to a remote repository,
+                    often hosted on GitHub. This step is a defining difference between distributed version control like Git and centralized version control like SVN. SVN uses a central,
+                    remote repository that changes get uploaded to directly. With Git, each user also has a local branch of the repository that they commit changes to. The local branch
+                    with all of its changes can then be pushed and merged into to the central repository one the changes are ready to be shared.</dd>
+                <dt>pull</dt>
+                <dd>The 'git pull' command updates your local repository by downloading files from a remote repository and then initiating a merge with your local files. It's actually
+                    a shorthand for two separate commands, 'git fetch' and 'git merge.' This ensures that you have the most recent version of every file and that any conflicts they have
+                    with changes you've made to your working files are resolved.</dd>
+                <dt>clone</dt>
+                <dd>The 'git clone' command creates a copy of an existing repository in another directory. This is primarily used to create a local working repository to which the user
+                    can commit changes. We understand the local repository as a clone of the remote one because Git itself doesn't distinguish between types of repositories. The only
+                    difference between the two is that a connection to the original repository is stored as the "origin" of the new repository. This is what allows the user to later 
+                    push the changes they've committed to a local repository through to the original remote repository. 
+                </dd>
+            </dl>
+        </div>
+    </body>
+</html>
