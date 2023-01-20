@@ -34,7 +34,7 @@
             }
             
             nav, main {
-                padding: 0 200px;
+                padding: 0 20px;
             }
             nav {
                 display: flex;
@@ -57,6 +57,12 @@
             
             main {
                 margin-top: 2em;
+            }
+
+            @media (min-width: 1280px) {
+                nav, main {
+                    padding: 0 200px;
+                }
             }
         </style>
     </head>
