@@ -13,27 +13,64 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">        
         <style>
-            body {
+            html, body {
                 margin: 0;
+                height: 100%;
+            }
+            .body-bg {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: -9999;
+                background: url("/img/bubbles.png");
+                opacity: 0.1;
+                background-position: 100% 0;
+                background-repeat: no-repeat;
             }
 
             h1, h2, h3, h4, h5, h6 {
                 font-family: 'Libre Baskerville', serif;
+                margin: 0;
             }
             
             nav, main {
                 padding: 0 200px;
             }
             nav {
+                display: flex;
+                justify-content: space-between;
                 height: 80px;
                 line-height: 80px;
-                background: rgb(218, 218, 224);
+                background:#EC8413;
+            }
+            nav .site-logo {
+                height: 80px;
+                fill: white;
+                stroke: white;
+                color: white;
+            }
+            nav a {
+                color: white;
+                font-family: 'Jost', sans-serif;
+                text-decoration: none;
+            }
+            
+            main {
+                margin-top: 2em;
             }
         </style>
     </head>
     <body>
+        <div class="body-bg"></div>
 		<nav>
-			<a href="/">&lt; Back to Home</a>
+            <div>
+                <a href="/">
+                        <object class="site-logo" type="image/svg+xml" data="/img/ngh-logo-white.svg"></object>
+                </a>
+            </div>
+            <div>
+			    <a href="/">&lt; Back to Home</a>
+            </div>
         </nav>
         <main>
             <h1>WDV 341 Homework Links</h1>
