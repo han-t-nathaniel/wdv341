@@ -29,7 +29,7 @@
         -->
         <meta http-equiv="X-UA-Compatible" content ="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Nathaniel's WDV341 Homework Page</title>
+        <title>3-1: PHP Basics</title>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">     
@@ -51,6 +51,7 @@
             </div>
         </nav>
         <main>
+            <h1>WDV 341 | 3-1: PHP Basics</h1>
             <?php echo $yourNameH1; ?>
             <h2><?php echo $yourName; ?></h2>
             <?php echo $displayNumbersP; ?>
