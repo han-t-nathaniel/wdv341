@@ -131,7 +131,7 @@
                     </dt>
                     <dd>
                         <p>
-                            <form method="post" action="#">
+                            <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                                 <input type="text" name="string-input" size="50" value="<?php echo $stringInputValue; ?>">
                                 <input type="submit" value="Submit">
                             </form>
