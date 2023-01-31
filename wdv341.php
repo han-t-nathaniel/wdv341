@@ -32,6 +32,7 @@
             <ul>
             <li><a href="unit-2/git-terms.html">2-1: Download Git Client & Create a Repository Account (Research and Define Git Terms)</a></li>
             <li><a href="unit-3/php-basics.php">3-1: PHP Basics</a></li>
+            <li><a href="unit-4/php-functions.php">4-1: PHP Functions</a></li>
             </ul>
         </main>
     </body>
