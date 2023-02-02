@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <!--
+      Author: Nathaniel Han
+      Date: February 2 2023
+  -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDV 341 5-1: HTML Form Processor</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Jost&family=Libre+Baskerville:wght@400;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/css/bubbles.css">
+</head>
+
+<body>
+  <div class="body-bg"></div>
+  <nav>
+    <div>
+      <a href="/">
+        <object class="site-logo" type="image/svg+xml" data="/img/ngh-logo-white.svg"></object>
+      </a>
+    </div>
+    <div>
+      <a href="/">&lt; Back to Home</a>
+    </div>
+  </nav>
+  <main>
+    <h1>WDV 341 | 5-1: HTML Form Processor</h1>
+    <p>This is an example input form that will demonstrate how a form connects to a server side process.</p>
+    <form id="form1" name="form1" method="post" action="demonstrateFormHandler.php">
+      <legend><h3>Example Form</h3></legend>
+
+      <p>
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName" />
+      </p>
+
+      <p>
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName" />
+      </p>
+
+      <p>
+        <label for="email">E-mail:</label>
+        <input type="email" name="email" id="email" />
+      </p>
+
+      <p>
+        <label for="schoolName">School Name:</label>
+        <input type="text" name="schoolName" id="schoolName" />
+      </p>
+
+      <p>
+        <label for="academicStanding">Academic Standing:</label>
+        <select name="academicStanding" id="academicStanding">
+          <option value="highschooler">High School</option>
+          <option value="freshman">Freshman</option>
+          <option value="sophomore">Sophomore</option>
+        </select>
+      </p>
+
+      <p>
+        <label for="selectedMajor">Program of Study:</label>
+        <select name="selectedMajor" id="selectedMajor">
+          <option value="cis">Computer Information Systems</option>
+          <option value="grd">Graphic Design</option>
+          <option value="wdv">Web Development</option>
+        </select>
+      </p>
+
+      <p>
+        <input type="checkbox" name="sendProgramInfo" id="sendProgramInfo" value="sendProgramInfo">
+        <label for="sendProgramInfo">Please contact me with program information</label>
+        <br/>
+        <input type="checkbox" name="contactAdvisor" id="contactAdvisor" value="contactAdvisor">
+        <label for="contactAdvisor">I would like to contact a program advisor</label>
+      </p>
+
+      <p>
+        <label for="comments">Comments:</label><br/>
+        <textarea name="comments" id="comments" rows="5" cols="50"></textarea>
+      </p>
+      
+      <p>
+        <input type="submit" name="button" id="button" value="Submit" />
+        <input type="reset" name="button2" id="button2" value="Reset" />
+      </p>
+    </form>
+  </main>
+</body>
+
+</html>
