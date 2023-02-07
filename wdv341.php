@@ -13,18 +13,17 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">     
         <link rel="stylesheet" href="/css/bubbles.css">
-        <script src="https://unpkg.com/@lottiefiles/lottie-player@0.4.0/dist/lottie-player.js"></script>
         <script src="/js/bubbles.js"></script>
     </head>
     <body onload="pageLoad()">
         <div class="body-bg"></div>
 		<nav>
-            <div>
-                <a href="/">
-                    <lottie-player class="site-logo" autoplay mode="normal" src="/img/ngh-logo.json"></lottie-player>
+            <div class="site-logo">
+                <a href="/" aria-label="Return to the home page">
+                    <lottie-player role="img" aria-label="NGH logo" autoplay mode="normal" src="/img/ngh-logo.json"></lottie-player>
                 </a>
             </div>
-            <div>
+            <div class="nav-links">
 			    <a href="/">&lt; Back to Home</a>
             </div>
         </nav>

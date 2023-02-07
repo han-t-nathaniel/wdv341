@@ -70,12 +70,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <body>
   <div class="body-bg"></div>
   <nav>
-    <div>
+    <div class="site-logo">
       <a href="/">
-        <object class="site-logo" type="image/svg+xml" data="/img/ngh-logo-white.svg"></object>
+        <object type="image/svg+xml" data="/img/ngh-logo-white.svg"></object>
       </a>
     </div>
-    <div>
+    <div class="nav-links">
       <a href="/">&lt; Back to Home</a>
     </div>
   </nav>

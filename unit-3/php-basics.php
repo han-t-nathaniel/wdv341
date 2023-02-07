@@ -40,13 +40,13 @@
     </head>
     <body>
         <div class="body-bg"></div>
-		<nav>
-            <div>
-                <a href="/">
-                        <object class="site-logo" type="image/svg+xml" data="/img/ngh-logo-white.svg"></object>
-                </a>
+        <nav>
+            <div class="site-logo">
+            <a href="/">
+                <object type="image/svg+xml" data="/img/ngh-logo-white.svg"></object>
+            </a>
             </div>
-            <div>
+            <div class="nav-links">
                 <a href="../wdv341.php">&lt; Back</a>
             </div>
         </nav>
