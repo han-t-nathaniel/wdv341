@@ -13,6 +13,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Jost&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">     
         <link rel="stylesheet" href="/css/bubbles.css">
+        <script src="/js/bubbles.js"></script>
     </head>
     <body onload="pageLoad()">
         <div class="body-bg"></div>
