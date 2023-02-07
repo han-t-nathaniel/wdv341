@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <!--
             Author: Nathaniel Han
-            Date: January 21 2023
+            Date: February 7 2023
         -->
         <meta http-equiv="X-UA-Compatible" content ="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +14,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Jost&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">     
         <link rel="stylesheet" href="/css/bubbles.css">
     </head>
-    <body>
+    <body onload="pageLoad()">
         <div class="body-bg"></div>
 		<nav>
             <div>
                 <a href="/">
-                        <object class="site-logo" type="image/svg+xml" data="/img/ngh-logo-white.svg"></object>
+                    <lottie-player class="site-logo" autoplay mode="normal" src="/img/ngh-logo.json"></lottie-player>
                 </a>
             </div>
             <div>
