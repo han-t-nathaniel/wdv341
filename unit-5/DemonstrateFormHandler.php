@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$comments = $_POST["comments"];
 
 	// Find out which checkboxes were selected.
-	$sendProgramInfo = array_key_exists("sendProgramInfo", $_POST) ? true : false;
-	$contactAdvisor = array_key_exists("contactAdvisor", $_POST) ? true : false;
+	$sendProgramInfo = isset($_POST["sendProgramInfo"]) ? true : false;
+	$contactAdvisor = isset($_POST["contactAdvisor"]) ? true : false;
 
 	$programAcronyms = [
 		"cis" => "Computer Information Systems",
