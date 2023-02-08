@@ -20,7 +20,7 @@
         <link rel="stylesheet" href="/css/bubbles.css">
         <script src="/js/bubbles.js"></script>
     </head>
-    <body onload="pageLoad()">
+    <body onload="themeLoad()">
         <div class="body-bg"></div>
 		<nav>
             <div class="site-logo">
