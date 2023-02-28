@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <!--
             Author: Nathaniel Han
-            Date: February 7 2023
+            Date: February 9 2023
         -->
         <meta http-equiv="X-UA-Compatible" content ="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -30,16 +30,22 @@
             </div>
             <div class="nav-links">
 			    <a href="/">&lt; Back to Home</a>
+			    <a href="contact.php">Contact Me</a>
             </div>
         </nav>
         <main>
             <h1>WDV 341 Homework Links</h1>
             <h2>Assignments:</h2>
             <ul>
-            <li><a href="unit-2/git-terms.html">2-1: Download Git Client & Create a Repository Account (Research and Define Git Terms)</a></li>
-            <li><a href="unit-3/php-basics.php">3-1: PHP Basics</a></li>
-            <li><a href="unit-4/php-functions.php">4-1: PHP Functions</a></li>
-            <li><a href="unit-5/WDV101-DemonstrateInputForm.html">5-1: HTML Form Processor</a></li>
+                <li><a href="unit-2/git-terms.html">2-1: Download Git Client & Create a Repository Account (Research and Define Git Terms)</a></li>
+                <li><a href="unit-3/php-basics.php">3-1: PHP Basics</a></li>
+                <li><a href="unit-4/php-functions.php">4-1: PHP Functions</a></li>
+                <li><a href="unit-5/WDV101-DemonstrateInputForm.html">5-1: HTML Form Processor</a></li>
+            </ul>
+
+            <h2>Projects:</h2>
+            <ul>
+                <li><a href="/wdv341/contact.php">Contact Form with Email</li>
             </ul>
         </main>
     </body>
