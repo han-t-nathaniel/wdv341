@@ -42,6 +42,7 @@
                 <li><a href="unit-4/php-functions.php">4-1: PHP Functions</a></li>
                 <li><a href="unit-5/WDV101-DemonstrateInputForm.html">5-1: HTML Form Processor</a></li>
                 <li><a href="unit-7/selectEvents.php">7-1: Create selectEvents.php</a></li>
+                <li><a href="unit-7/selectOneEvent.php">7-2: Create selectOneEvent.php</a></li>
             </ul>
 
             <h2>Projects:</h2>
