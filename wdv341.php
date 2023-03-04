@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <!--
             Author: Nathaniel Han
-            Date: February 9 2023
+            Date: March 3 2023
         -->
         <meta http-equiv="X-UA-Compatible" content ="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,6 +41,7 @@
                 <li><a href="unit-3/php-basics.php">3-1: PHP Basics</a></li>
                 <li><a href="unit-4/php-functions.php">4-1: PHP Functions</a></li>
                 <li><a href="unit-5/WDV101-DemonstrateInputForm.html">5-1: HTML Form Processor</a></li>
+                <li><a href="unit-7/selectEvents.php">7-1: Create selectEvents.php</a></li>
             </ul>
 
             <h2>Projects:</h2>
