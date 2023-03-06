@@ -35,7 +35,7 @@
         </nav>
         <main>
             <h1>Contact Me</h1>
-            <form id="contact-form" name="contact-form" method="post" action="formHandler.php">
+            <form id="contact-form" class="theme-form" name="contact-form" method="post" action="formHandler.php">
                 <p>
                     <label for="contact-name">Name: </label><br>
                     <input type="text" id="contact-name" name="contact-name" required>
