@@ -28,12 +28,24 @@ if (!$row = $stmt->fetch()) {
     $queryResultOutput .= "<th class=\"name-column\">Name</th>";
     $queryResultOutput .= "<th class=\"description-column\">Description</th>";
     $queryResultOutput .= "<th class=\"presenter-column\">Presenter</th>";
+    $queryResultOutput .= "<th class=\"date-column\">Date</th>";
+    $queryResultOutput .= "<th class=\"time-column\">Time</th>";
+    $queryResultOutput .= "<th class=\"date-inserted-column\">Date Inserted</th>";
+    $queryResultOutput .= "<th class=\"date-updated-column\">Date Updated</th>";
     $queryResultOutput .= "</tr></thead><tbody>";
     do {
+        $formattedTime = date("g:ia", strtotime($row["time"]));
+        $formattedDate = date("m/d/y", strtotime($row["date"]));
+        $formattedDateInserted = date("m/d/y", strtotime($row["date_inserted"]));
+        $formattedDateUpdated = date("m/d/y", strtotime($row["date_updated"]));
         $queryResultOutput .= "<tr>";
         $queryResultOutput .= "<td>" . $row["name"] . '</td>';
         $queryResultOutput .= "<td class=\"description-column\">" . $row["description"] . '</td>';
         $queryResultOutput .= "<td>" . $row["presenter"] . '</td>';
+        $queryResultOutput .= "<td>" . $formattedDate . '</td>';
+        $queryResultOutput .= "<td>" . $formattedTime . '</td>';
+        $queryResultOutput .= "<td>" . $formattedDateInserted . '</td>';
+        $queryResultOutput .= "<td>" . $formattedDateUpdated . '</td>';
         $queryResultOutput .= "</tr>";
     } while ($row = $stmt->fetch());
     $queryResultOutput .= "</tbody></table>";
@@ -60,10 +72,9 @@ if (!$row = $stmt->fetch()) {
         <link href="https://fonts.googleapis.com/css2?family=Jost&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">     
         <link rel="stylesheet" href="/css/bubbles.css">
         <style>
-            .description-column {
-                width: 60%;
-                padding-left: 20px;
-                padding-right: 20px;
+            td {
+                padding-left: 10px;
+                padding-right: 10px;
             }
         </style>
         <script src="/js/bubbles.js"></script>
