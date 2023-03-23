@@ -1,41 +1,67 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Get form input.
-	$contactName = $_POST["contact-name"];
-	$contactEmail = $_POST["contact-email"];
-	$contactReason = $_POST["contact-reason"];
-	$contactMessage = $_POST["contact-message"];
+// Defines RECAPTCHA_V3_SECRET_KEY
+require_once("apikeys.php");
 
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     // This boolean stores whether or not an error has been encountered while validating the contact form input or sending the confirmation e-mail. 
     $contactError = false;
-
-    // Validate the submitted e-mail.
-    if (!filter_var($contactEmail, FILTER_VALIDATE_EMAIL)) {
-        $contactError = true;
-    }
-
-    // Format the form data for e-mail display.
-    $formattedName = htmlspecialchars($contactName);
-    $formattedEmail = htmlspecialchars($contactEmail);
-    $formattedMessage = nl2br(htmlspecialchars($contactMessage));
-
-    $contactReasonNameMap = [
-        "web-design"        => "Let's build a website",
-        "graphic-design"    => "Design me a logo or graphic",
-        "question"          => "I have a question",
-    ];
-    $formattedReason = $contactReasonNameMap[$contactReason];
-
-    $formattedDate = date("m/d/Y");
-
-    $headers = [];
-    $headers[] = "From: Nathaniel Gomez-Han <contact@nthan.com>";
-    $headers[] = "MIME-Version: 1.0";
-    $headers[] = "Content-Type: text/html; charset=UTF-8";
 
     // Initialize variables for the page output.
     $h1Text = "";
     $confirmationMessage = "";
+
+    // Get the user response token provided by reCAPTCHA on the client-side.
+    $token = $_POST['g-recaptcha-response'];
+     
+    // Verify the user with reCAPTCHA v3.
+    $ch = curl_init();
+    curl_setopt($ch, CURLOPT_URL, "https://www.google.com/recaptcha/api/siteverify");
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(["secret" => RECAPTCHA_V3_SECRET_KEY, "response" => $token]));
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $responseJSON = curl_exec($ch);
+    curl_close($ch);
+    $responseArr = json_decode($responseJSON, true);
+
+    if (!$responseArr["success"] || $responseArr["score"] < 0.5) {
+        $contactError = true;
+        $h1Text = "Uh-oh";
+        $confirmationMessage =
+            "Your form submission has been detected as spam. If this was incorrect, please return to the form and try again." .
+            '<p><a href="contact.php"><button class="bubble-button">Go Back</button></a></p>';
+    }
+
+    if (!$contactError) {
+        // Get form input.
+        $contactName = $_POST["contact-name"];
+        $contactEmail = $_POST["contact-email"];
+        $contactReason = $_POST["contact-reason"];
+        $contactMessage = $_POST["contact-message"];
+
+        // Validate the submitted e-mail.
+        if (!filter_var($contactEmail, FILTER_VALIDATE_EMAIL)) {
+            $contactError = true;
+        }
+
+        // Format the form data for e-mail display.
+        $formattedName = htmlspecialchars($contactName);
+        $formattedEmail = htmlspecialchars($contactEmail);
+        $formattedMessage = nl2br(htmlspecialchars($contactMessage));
+
+        $contactReasonNameMap = [
+            "web-design"        => "Let's build a website",
+            "graphic-design"    => "Design me a logo or graphic",
+            "question"          => "I have a question",
+        ];
+        $formattedReason = $contactReasonNameMap[$contactReason];
+
+        $formattedDate = date("m/d/Y");
+
+        $headers = [];
+        $headers[] = "From: Nathaniel Gomez-Han <contact@nthan.com>";
+        $headers[] = "MIME-Version: 1.0";
+        $headers[] = "Content-Type: text/html; charset=UTF-8";
+    }
 
     // Send myself an e-mail with the submitted form data.
     if (!$contactError) {
@@ -208,7 +234,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (!$contactError) {
         $h1Text = "Thanks for reaching out!";
         $confirmationMessage = "Your message has been sent. You will receive an e-mail confirmation with a copy of your message shortly.";
-    } else {
+    } else if (empty($confirmationMessage)) {
         $h1Text = "Uh-oh";
         $confirmationMessage =
             "An error has occurred. Please make sure you've entered a valid e-mail and try again." .

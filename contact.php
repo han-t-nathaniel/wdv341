@@ -19,6 +19,12 @@
         <link href="https://fonts.googleapis.com/css2?family=Jost&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">     
         <link rel="stylesheet" href="/css/bubbles.css">
         <script src="/js/bubbles.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js"></script>
+        <script>
+            function onSubmit(token) {
+                document.getElementById("contact-form").submit();
+            }
+        </script>
     </head>
     <body onload="themeLoad()">
         <div class="body-bg"></div>
@@ -47,6 +53,7 @@
                 <p>
                     <label for="contact-reason">Reason for Contact: </label><br>
                     <select id="contact-reason" name="contact-reason" required>
+                        <option value="" selected disabled>Select a subject matter</option>
                         <option value="web-design">Let's build a website</option>
                         <option value="graphic-design">Design me a logo or graphic</option>
                         <option value="question">I have a question</option>
@@ -58,7 +65,11 @@
                     <textarea id="contact-message" name="contact-message" rows="6"></textarea>
                 </p>
                 <p>
-                    <button id="contact-send" class="bubble-button" name="contact-send" type="submit" form="contact-form" value="Submit">Send</button>
+                    <button id="contact-send" class="bubble-button g-recaptcha" type="submit"
+                        name="contact-send" form="contact-form" value="Submit"
+                        data-sitekey="6Lcl0SMlAAAAANodz-IF2r0Mu8biO7I3CGjPJs3C" 
+                        data-callback='onSubmit' 
+                        data-action='submit'>Send</button>
                     <button id="contact-send" class="bubble-button" name="contact-reset" type="reset" form="contact-form" value="Reset">Reset</button>
                 </p>
             </form>
