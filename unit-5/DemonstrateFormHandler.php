@@ -1,5 +1,10 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	// Check the honeypot field.
+	if (!empty($_POST["phoneNumber"])) {
+		die("Invalid Access");
+	}
+
 	// Get form input.
 	$firstName = $_POST["firstName"];
 	$lastName = $_POST["lastName"];
@@ -21,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$programPhrase = $programAcronyms[$selectedMajor];
 
 	$confirmationMessage = 
-		"<p>Dear $firstName,</p>
+		"<p>Dear $firstName $lastName,</p>
 		<p>Thank you for your interest in DMACC.</p>
 		<p>We have you listed as a $academicStanding starting this fall.</p>
 		<p>You have declared $programPhrase as your major.</p>

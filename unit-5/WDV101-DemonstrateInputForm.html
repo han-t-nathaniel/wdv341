@@ -34,39 +34,48 @@
     <p>This is an example input form that will demonstrate how a form connects to a server side process.</p>
     <form id="form1" name="form1" method="post" action="DemonstrateFormHandler.php">
       <legend><h3>Example Form</h3></legend>
-
-      <p>
-        <label for="firstName">First Name:</label>
-        <input type="text" name="firstName" id="firstName" />
+      <i class="required-field">* Required field</i>
+      
+      <p class="hidden">
+        <!-- Honeypot Field -->
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="text" name="phoneNumber" id="phoneNumber"/>
       </p>
 
       <p>
-        <label for="lastName">Last Name:</label>
-        <input type="text" name="lastName" id="lastName" />
+        <label for="firstName">First Name:<span class="required-field">*</span></label>
+        <input type="text" name="firstName" id="firstName" required/>
       </p>
 
       <p>
-        <label for="email">E-mail:</label>
-        <input type="email" name="email" id="email" />
+        <label for="lastName">Last Name:<span class="required-field">*</span></label>
+        <input type="text" name="lastName" id="lastName" required/>
       </p>
 
       <p>
-        <label for="schoolName">School Name:</label>
-        <input type="text" name="schoolName" id="schoolName" />
+        <label for="email">E-mail:<span class="required-field">*</span></label>
+        <input type="email" name="email" id="email" required/>
       </p>
 
       <p>
-        <label for="academicStanding">Academic Standing:</label>
-        <select name="academicStanding" id="academicStanding">
-          <option value="highschooler">High School</option>
-          <option value="freshman">Freshman</option>
-          <option value="sophomore">Sophomore</option>
-        </select>
+        <label for="schoolName">School Name:<span class="required-field">*</span></label>
+        <input type="text" name="schoolName" id="schoolName" required/>
+      </p>
+
+      <p role="radiogroup" aria-labelledby="academicStandingLabel" aria-required="true">
+        <span id="academicStandingLabel">Academic Standing:<span class="required-field">*</span></span>
+        <input type="radio" name="academicStanding" id="academicStandingHighschooler" value="highschooler" required/>
+        <label for="academicStandingHighschooler">High School</label>
+        <input type="radio" name="academicStanding" id="academicStandingFreshman" value="freshman" required/>
+        <label for="academicStandingFreshman">Freshman</label>
+        <input type="radio" name="academicStanding" id="academicStandingSophomore" value="sophomore" required/>
+        <label for="academicStandingSophomore">Sophomore</label>
       </p>
 
       <p>
-        <label for="selectedMajor">Program of Study:</label>
-        <select name="selectedMajor" id="selectedMajor">
+        <label for="selectedMajor">Program of Study:<span class="required-field">*</span></label>
+        <select name="selectedMajor" id="selectedMajor" required>
+          <option value="" selected disabled>Select a Major</option>
           <option value="cis">Computer Information Systems</option>
           <option value="grd">Graphic Design</option>
           <option value="wdv">Web Development</option>
