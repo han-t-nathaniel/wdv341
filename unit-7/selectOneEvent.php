@@ -1,7 +1,7 @@
 <?php
-require_once("exceptionHandlers.php");
+require_once(__DIR__ . "/../exceptionHandlers.php");
 // Connect to the database. Creates a connection object called $connection.
-require_once("dbConnect.php");
+require_once(__DIR__ . "/../dbConnect.php");
 
 $sql = "SELECT * FROM wdv341_events WHERE id=2";
 

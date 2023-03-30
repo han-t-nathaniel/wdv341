@@ -62,7 +62,7 @@ class Event implements \JsonSerializable {
         return $this->eventTime;
     }
 
-    function jsonSerialize() {
+    function jsonSerialize(): mixed {
         $vars = get_object_vars($this);
         return $vars;
     }

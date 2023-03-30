@@ -1,7 +1,7 @@
 <?php
-require_once("exceptionHandlers.php");
+require_once(__DIR__ . "/../exceptionHandlers.php");
 // Connect to the database. Creates a connection object called $connection.
-require_once("dbConnect.php");
+require_once(__DIR__ . "/../dbConnect.php");
 
 require_once("Event.php");
 
