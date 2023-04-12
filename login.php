@@ -51,7 +51,7 @@
     <meta charset="UTF-8">
     <!--
         Author: Nathaniel Gomez-Han
-        Date: April 11 2023
+        Date: April 12 2023
     -->
     <meta http-equiv="X-UA-Compatible" content ="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -76,7 +76,19 @@
         </a>
     </div>
     <div class="nav-links">
-        <a href="/">&lt; Back to Home</a>
+        <a href="wdv341.php">&lt; Back</a>
+        <a href="contact.php">Contact Me</a>
+        <?php
+            if ($isUserValid) {
+        ?>
+                <a href="logout.php">Log Out</a>
+        <?php
+            } else {
+        ?>
+                <a href="login.php">Log In</a>
+        <?php
+            }
+        ?>
     </div>
 </nav>
 <main>
@@ -96,19 +108,19 @@
         } else {
     ?>
             <h2>Login Form</h2>
-            <form method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
+            <form id="login-form" class="theme-form" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
                 <p>
-                    <label for="inUserName">Username: </label>
+                    <label for="inUserName">Username: </label><br/>
                     <input type="text" name="inUserName" id="inUserName" placeholder="Username">
                     <span class="error"><?= $invalidLoginErrorMessage ?></span>
                 </p>
                 <p>
-                    <label for="inPassword">Password:</label>
-                    <input type="password" name="inPassword" id="inPassword">
+                    <label for="inPassword">Password:</label><br/>
+                    <input type="password" name="inPassword" id="inPassword" placeholder="Password">
                 </p>
                 <p>
-                    <input type="submit" name="submit" value="Log In">
-                    <input type="reset" name="reset" value="Reset">
+                    <button class="bubble-button" type="submit" form="login-form" name="submit" value="Log In">Log In</button>
+                    <button class="bubble-button" type="reset" form="login-form" name="reset" value="Reset">Reset</button>
                 </p>
             </form>
     <?php

@@ -1,10 +1,20 @@
+<?php
+    session_start();
+
+    $isUserValid = false;
+    $invalidLoginErrorMessage = "";
+
+    if (isset($_SESSION['isUserValid'])) {
+        $isUserValid = $_SESSION['isUserValid'];
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <!--
-            Author: Nathaniel Han
-            Date: March 3 2023
+            Author: Nathaniel Gomez-Han
+            Date: April 12 2023
         -->
         <meta http-equiv="X-UA-Compatible" content ="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,6 +41,17 @@
             <div class="nav-links">
 			    <a href="/">&lt; Back to Home</a>
 			    <a href="contact.php">Contact Me</a>
+                <?php
+                if ($isUserValid) {
+                    ?>
+                    <a href="logout.php">Log Out</a>
+                    <?php
+                } else {
+                    ?>
+                    <a href="login.php">Log In</a>
+                    <?php
+                }
+                ?>
             </div>
         </nav>
         <main>
