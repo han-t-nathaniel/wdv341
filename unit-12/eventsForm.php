@@ -71,7 +71,7 @@
         -->
         <meta http-equiv="X-UA-Compatible" content ="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WDV 341 | 11-1: Self Posting Input Event form with INSERT</title>
+        <title>WDV 341 | 12-1: Create a form page for the events</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" href="/favicon.ico" sizes="16x16 32x32"><!-- 32×32 -->
         <link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -123,7 +123,7 @@
             </div>
         </nav>
         <main>
-            <h1>WDV 341 | 11-1: Self Posting Input Event form with INSERT</h1>
+            <h1>WDV 341 | 12-1: Create a form page for the events</h1>
             <?php
                 if ($isFormRequested) {
                 // Display Input Event form.
