@@ -66,6 +66,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Jost&family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/bubbles.css">
     <script src="/js/bubbles.js"></script>
+    <style>
+        .admin-commands-list li {
+            margin-bottom: 0.5em;
+        }
+    </style>
 </head>
 <body onload="themeLoad()">
 <div class="body-bg"></div>
@@ -93,17 +98,17 @@
     </div>
 </nav>
 <main>
-    <h1>WDV 341 | 13-1 Event Login</h1>
+    <h1>WDV 341 | Event Admin Login</h1>
     <?php
         if ($isUserValid) {
     ?>
             <h2>Welcome</h2>
             <p>You are signed in as: <?= $_SESSION['username'] ?>.</p>
             <p>Admin options are available to you:</p>
-            <ul>
-                <li><a href="add-event.php">Add a New Event</a></li>
-                <li>Manage Events</li>
-                <li><a href="logout.php">Log Out</a></li>
+            <ul class="admin-commands-list">
+                <li><a href="add-event.php"><button class="bubble-button">Add New Event</button></a></li>
+                <li><a href="manage-events.php"><button class="bubble-button">Manage Events</button></a></li>
+                <li><a href="logout.php"><button class="bubble-button">Log Out</button></a></li>
             </ul>
     <?php
         } else {
