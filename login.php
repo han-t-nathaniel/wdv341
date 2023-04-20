@@ -76,11 +76,12 @@
         </a>
     </div>
     <div class="nav-links">
-        <a href="wdv341.php">&lt; Back</a>
+        <a href="wdv341.php">&lt; WDV 341</a>
         <a href="contact.php">Contact Me</a>
         <?php
             if ($isUserValid) {
         ?>
+                <a href="login.php">Admin</a>
                 <a href="logout.php">Log Out</a>
         <?php
             } else {
@@ -100,9 +101,9 @@
             <p>You are signed in as: <?= $_SESSION['username'] ?>.</p>
             <p>Admin options are available to you:</p>
             <ul>
-                <li>Enter new events</li>
-                <li>Enter new event users</li>
-                <li><a href="logout.php">Sign off</a></li>
+                <li><a href="add-event.php">Add a New Event</a></li>
+                <li>Manage Events</li>
+                <li><a href="logout.php">Log Out</a></li>
             </ul>
     <?php
         } else {

@@ -44,6 +44,7 @@
                 <?php
                 if ($isUserValid) {
                     ?>
+                    <a href="login.php">Admin</a>
                     <a href="logout.php">Log Out</a>
                     <?php
                 } else {
