@@ -106,8 +106,8 @@
             <p>You are signed in as: <?= $_SESSION['username'] ?>.</p>
             <p>Admin options are available to you:</p>
             <ul class="admin-commands-list">
-                <li><a href="add-event.php"><button class="bubble-button">Add New Event</button></a></li>
-                <li><a href="manage-events.php"><button class="bubble-button">Manage Events</button></a></li>
+                <li><a href="events/add-event.php"><button class="bubble-button">Add New Event</button></a></li>
+                <li><a href="events/manage-events.php"><button class="bubble-button">Manage Events</button></a></li>
                 <li><a href="logout.php"><button class="bubble-button">Log Out</button></a></li>
             </ul>
     <?php

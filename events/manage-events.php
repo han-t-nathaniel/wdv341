@@ -6,12 +6,12 @@ $isUserValid = false;
 if (isset($_SESSION["isUserValid"])) {
     $isUserValid = $_SESSION["isUserValid"];
 } else {
-    header("Location: login.php");
+    header("Location: ../login.php");
 }
 
-require_once(__DIR__ . "/exceptionHandlers.php");
+require_once(__DIR__ . "/../exceptionHandlers.php");
 // Connect to the database. Creates a connection object called $connection.
-require_once(__DIR__ . "/dbConnect.php");
+require_once(__DIR__ . "/../dbConnect.php");
 
 $sql = "SELECT * FROM wdv341_events";
 
@@ -74,7 +74,7 @@ if (!$row = $stmt->fetch()) {
     <meta charset="UTF-8">
     <!--
         Author: Nathaniel Gomez-Han
-        Date: April 19, 2023
+        Date: April 20, 2023
     -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -119,17 +119,17 @@ if (!$row = $stmt->fetch()) {
         </a>
     </div>
     <div class="nav-links">
-        <a href="wdv341.php">&lt; WDV 341</a>
-        <a href="contact.php">Contact Me</a>
+        <a href="../wdv341.php">&lt; WDV 341</a>
+        <a href="../contact.php">Contact Me</a>
         <?php
         if ($isUserValid) {
             ?>
-            <a href="login.php">Admin</a>
-            <a href="logout.php">Log Out</a>
+            <a href="../login.php">Admin</a>
+            <a href="../logout.php">Log Out</a>
             <?php
         } else {
             ?>
-            <a href="login.php">Log In</a>
+            <a href="../login.php">Log In</a>
             <?php
         }
         ?>

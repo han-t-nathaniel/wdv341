@@ -66,11 +66,11 @@
         <meta charset="UTF-8">
         <!--
             Author: Nathaniel Gomez-Han
-            Date: April 12 2023
+            Date: April 20 2023
         -->
         <meta http-equiv="X-UA-Compatible" content ="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>WDV 341 | 12-1: Create a form page for the events</title>
+        <title>WDV 341 | Add Event</title>
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" href="/favicon.ico" sizes="16x16 32x32"><!-- 32×32 -->
         <link rel="icon" href="/icon.svg" type="image/svg+xml">
@@ -123,7 +123,7 @@
             </div>
         </nav>
         <main>
-            <h1>WDV 341 | 12-1: Create a form page for the events</h1>
+            <h1>WDV 341 | Add Event</h1>
             <?php
                 if ($isFormRequested) {
                 // Display Input Event form.
@@ -172,7 +172,7 @@
                 // Display confirmation
             ?>
                 <h3>Thank You!</h3>
-                    <p>Your event has been added to the database. You can see your new event on <a href="../unit-7/selectEvents.php">this page</a>.</p>
+                    <p>Your event has been added to the database. You can see your new event on <a href="manage-events.php">this page</a>.</p>
             <?php
                 }
             ?>
