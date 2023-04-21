@@ -5,6 +5,8 @@ $isUserValid = false;
 
 if (isset($_SESSION["isUserValid"])) {
     $isUserValid = $_SESSION["isUserValid"];
+} else {
+    header("Location: login.php");
 }
 
 require_once(__DIR__ . "/exceptionHandlers.php");
