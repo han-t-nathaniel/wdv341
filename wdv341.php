@@ -68,6 +68,9 @@
                 <li><a href="unit-5/WDV101-DemonstrateInputForm.html">10-1: Protect Form Processors Part 1 - Updated Assignment 5-1</a></li>
                 <li><a href="/wdv341/contact.php">10-1: Protect Form Processors Part 2 - Updated E-mail Form</a></li>
                 <li><a href="unit-12/eventsForm.php">12-1: Create a form page for the events</a></li>
+                <li><a href="login.php">13-2: Create a login.php page</a></li>
+                <li><a href="logout.php">13-3: Create a logout.php page</a></li>
+                <li><a href="login.php">14-1: Protect your dynamic pages</a></li>
             </ul>
 
             <h2>Projects:</h2>
