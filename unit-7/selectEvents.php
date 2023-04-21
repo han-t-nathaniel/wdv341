@@ -2,7 +2,6 @@
 session_start();
 
 $isUserValid = false;
-$invalidLoginErrorMessage = "";
 
 if (isset($_SESSION['isUserValid'])) {
     $isUserValid = $_SESSION['isUserValid'];
