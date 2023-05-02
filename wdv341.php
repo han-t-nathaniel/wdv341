@@ -76,6 +76,7 @@
             <h2>Projects:</h2>
             <ul>
                 <li><a href="wdv341/contact.php">Contact Form with E-mail</a></li>
+                <li><a href="/event-manager">Portfolio Project: Event Manager</a></li>
             </ul>
         </main>
     </body>
