@@ -64,6 +64,7 @@
                 <li><a href="unit-5/WDV101-DemonstrateInputForm.html">5-1: HTML Form Processor</a></li>
                 <li><a href="unit-7/selectEvents.php">7-1: Create selectEvents.php</a></li>
                 <li><a href="unit-7/selectOneEvent.php">7-2: Create selectOneEvent.php</a></li>
+                <li><a href="unit-8/retail-products.php">8-1: PHP Formatted Content</a></li>
                 <li><a href="unit-9/deliverEventObject.php">9-1: PHP-JSON Event Object</a></li>
                 <li><a href="unit-5/WDV101-DemonstrateInputForm.html">10-1: Protect Form Processors Part 1 - Updated Assignment 5-1</a></li>
                 <li><a href="wdv341/contact.php">10-1: Protect Form Processors Part 2 - Updated E-mail Form</a></li>
