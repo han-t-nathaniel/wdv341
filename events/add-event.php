@@ -126,7 +126,7 @@
             <h1>WDV 341 | Add Event</h1>
             <?php
                 if ($isFormRequested) {
-                // Display Input Event form.
+                // Display Input TourDate form.
             ?>
                 <form id="add-event-form" class="theme-form" method="post" action="<?= htmlspecialchars($_SERVER["PHP_SELF"]) ?>">
                     <h3>Event Input Form</h3>

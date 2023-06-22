@@ -34,7 +34,7 @@ $queryResultOutput = "";
 if (!$row = $stmt->fetch()) {
     $queryResultOutput = "No events found.";
 } else {
-    $outputObj = new Event($row['name'], $row['description'], $row['presenter'], $row['date'], $row['time']);
+    $outputObj = new TourDate($row['name'], $row['description'], $row['presenter'], $row['date'], $row['time']);
     $outputJSON = json_encode($outputObj);
     echo $outputJSON;
 }

@@ -61,10 +61,12 @@ if (!$row = $stmt->fetch()) {
         $queryResultOutput .= "<td>" . $formattedTime . "</td>";
         $queryResultOutput .= "<td>" . $formattedDateInserted . "</td>";
         $queryResultOutput .= "<td>" . $formattedDateUpdated . "</td>";
-        $queryResultOutput .= "<td class='options-column'><button class='bubble-button'>Update</button><button class='bubble-button'>Delete</button></td>";
-        $queryResultOutput .= "</tr>";
+        $queryResultOutput .= "<td class='options-column'>";
+        $queryResultOutput .= "<button class='bubble-button'>Update</button>";
+        $queryResultOutput .= "<a href='delete-tour-date.php?eventID=" . $row["id"] . "'><button class='bubble-button'>Delete</button></a>";
+        $queryResultOutput .= "</td></tr>";
     } while ($row = $stmt->fetch());
-    $queryResultOutput .= "<tr><td><a href='add-event.php'><button class='bubble-button'>Add New Event</button></a></td></tr>";
+    $queryResultOutput .= "<tr><td><a href='add-tour-date.php'><button class='bubble-button'>Add New TourDate</button></a></td></tr>";
     $queryResultOutput .= "</tbody></table>";
 }
 ?>
